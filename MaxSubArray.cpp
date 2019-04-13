@@ -3,7 +3,7 @@
 #include<iostream>
 #include<vector>
 
-std::vector<int> KthLargestUnsorted(std::vector<int> vect, int k) {//use if unsorted array
+std::vector<int> KthLargestUnsorted(std::vector<int> vect, int k) {//use if list is unsorted  -- complexity O(n^2)
 	int outerIter, innerIter, max , maxIndex, vectorSize;
 	if (k > vect.size()) return {};// invalid input
 	std::vector<int> kthLargest;
@@ -27,7 +27,7 @@ std::vector<int> KthLargestUnsorted(std::vector<int> vect, int k) {//use if unso
 	}
 	return kthLargest;
 }
-std::vector<int> KthLargestSorted(std::vector<int> vect, int k) {
+std::vector<int> KthLargestSorted(std::vector<int> vect, int k) {//use if list is sorted -- complexity O(n)
 	int iter;
 	if (k > vect.size()) return {};// invalid input
 	std::vector<int> kthLargest;
