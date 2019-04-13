@@ -3,9 +3,7 @@
 
 #include "pch.h"
 #include <iostream>
-#include <vector>
-#include<stdlib.h> 
-#include<stdio.h>
+
 /*
 * merge algorthim is used to merge the two SORTED halfs of an array into 1 fully sorted array 
 * EX: 1,3,4,7,2,5,6,8
