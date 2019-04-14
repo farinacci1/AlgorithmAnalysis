@@ -27,7 +27,7 @@ std::vector<int> KthLargestUnsorted(std::vector<int> vect, int k) {//use if list
 	}
 	return kthLargest;
 }
-std::vector<int> KthLargestSorted(std::vector<int> vect, int k) {//use if list is sorted -- complexity O(n)
+std::vector<int> KthLargestSorted(std::vector<int> vect, int k) {//use if list is sorted -- complexity O(k)
 	int iter;
 	if (k > vect.size()) return {};// invalid input
 	std::vector<int> kthLargest;
