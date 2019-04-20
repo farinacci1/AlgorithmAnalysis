@@ -1,16 +1,16 @@
 #include "pch.h"
 #include <iostream>
 #include <vector>
-
+//to see how countingsort works uncomment print statements throughout
 std::vector<int> countingSort(std::vector<int> vect,int k)
 {// vect is list of values, k is largest element in list
 	int i;
 	std::vector<int> occurences, sortedList;
-	std::cout << "occurences init: ";
+	//std::cout << "occurences init: ";
 	for (i = 0; i <= k; i++) 
 	{
 		occurences.push_back(0);
-		std::cout << occurences[i] << " ";
+		//std::cout << occurences[i] << " ";
 	}
 	for (i = 0; i < vect.size(); i++)//occurence of each number in vect
 	{
@@ -20,19 +20,19 @@ std::vector<int> countingSort(std::vector<int> vect,int k)
 	{
 		occurences[i] += occurences[i -1];
 	}
-	std::cout << std::endl << "occurences counted: ";
-	for (i = 0; i <= k; i++) //number of elements less than or equal to i
-	{
-		std::cout << occurences[i] << " ";
-	}
+	//std::cout << std::endl << "occurences counted: ";
+	//for (i = 0; i <= k; i++) //number of elements less than or equal to i
+	//{
+		//std::cout << occurences[i] << " ";
+	//}
 	std::cout << std::endl << "sorted list init: ";
 	//new empty vector to store sorted vect
 	for (i = 0; i < vect.size(); i++)
 	{
 		sortedList.push_back(0);
-		std::cout << sortedList[i] << " ";
+		//std::cout << sortedList[i] << " ";
 	}
-	std::cout << std::endl;
+	//std::cout << std::endl;
 	
 	for(i = vect.size() -1 ; i >= 0; i--)
 	{
@@ -40,7 +40,7 @@ std::vector<int> countingSort(std::vector<int> vect,int k)
 		occurences[vect[i]] -=  1;
 		
 	}
-	std::cout << std::endl;
+	//std::cout << std::endl;
 	return sortedList; 
 }
 void print(std::vector<int> vect)
